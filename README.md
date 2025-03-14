@@ -6,4 +6,4 @@ A modern e-commerce platform | store online application
 
 @ React 19
 @ Next.js 15
-@ Using Inter font
+@ Using Shadcn/UI for the UI components
