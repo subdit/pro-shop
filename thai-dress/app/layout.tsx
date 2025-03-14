@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google';
 import styles from '@/assets/styles/styles';
+import { APP_NAME } from '@/lib/constants';
 
 // const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Thai-dress',
+  title: `${APP_NAME} | A modern Thai dress shop in the USA`,
   description: 'A modern Thai dress shop in the USA built with Next.js'
 };
 
