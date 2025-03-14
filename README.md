@@ -1,8 +1,9 @@
 # Pro-shop
 
-e-commerce application | store online platform
+A modern e-commerce platform | store online application
 
 #### Technology uses
 
-** React 19
-** Next.js 15
+@ React 19
+@ Next.js 15
+@ Using Inter font
