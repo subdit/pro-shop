@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+// import { Inter } from 'next/font/google';
+import styles from '@/assets/styles/styles';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'thai-dress',
+  title: 'Thai-dress',
   description: 'A modern Thai dress shop in the USA built with Next.js'
 };
 
@@ -14,9 +14,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { wrapper } = styles;
   return (
     <html lang='en'>
-      <body className={`${inter.className}`}>{children}</body>
+      <body>
+        <div className='flex h-screen flex-col'>
+          <main className={`flex-1 ${wrapper}`}>{children}</main>
+        </div>
+      </body>
     </html>
   );
 }
