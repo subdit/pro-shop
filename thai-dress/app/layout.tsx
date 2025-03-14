@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google';
 import styles from '@/assets/styles/styles';
-import { APP_NAME } from '@/lib/constants';
+import { APP_DESCRIPTION, APP_NAME, SERVER_URL } from '@/lib/constants';
 
 // const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: `${APP_NAME} | A modern Thai dress shop in the USA`,
-  description: 'A modern Thai dress shop in the USA built with Next.js'
+  title: { template: `%s | APP_NAME`, default: APP_NAME },
+  description: APP_DESCRIPTION,
+  metadataBase: new URL(SERVER_URL)
 };
 
 export default function RootLayout({
