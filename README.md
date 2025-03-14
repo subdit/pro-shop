@@ -1,8 +1,8 @@
-# pro-shop
+# Pro-shop
 
 e-commerce application | store online platform
 
-### Technology uses
+#### Technology uses
 
-React 19
-Noxt.js 15
+** React 19
+** Next.js 15
