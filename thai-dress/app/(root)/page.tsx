@@ -1,11 +1,7 @@
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 
 const HomePage = () => {
-  return (
-    <div>
-      Thai Dress in the USA <Button>Button Submit</Button>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default HomePage;
