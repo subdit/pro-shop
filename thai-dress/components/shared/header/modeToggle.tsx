@@ -3,10 +3,16 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { SunIcon, MoonIcon, SunMoon } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import {
+  DropdownMenuContent,
+  DropdownMenuLabel
+} from '@radix-ui/react-dropdown-menu';
 
 const ModeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -17,7 +23,9 @@ const ModeToggle = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='ghost'>
+        <Button
+          variant='ghost'
+          className='focus-visible:ring-0 focus-visible:ring-offset-0'>
           {theme === 'system' ? (
             <SunMoon />
           ) : theme === 'dark' ? (
@@ -27,6 +35,31 @@ const ModeToggle = () => {
           )}
         </Button>
       </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuCheckboxItem
+          checked={theme === 'system'}
+          onClick={() => {
+            setTheme('system');
+          }}>
+          System
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          checked={theme === 'dark'}
+          onClick={() => {
+            setTheme('dark');
+          }}>
+          dark
+        </DropdownMenuCheckboxItem>
+        <DropdownMenuCheckboxItem
+          checked={theme === 'light'}
+          onClick={() => {
+            setTheme('light');
+          }}>
+          light
+        </DropdownMenuCheckboxItem>
+      </DropdownMenuContent>
     </DropdownMenu>
   );
 };
