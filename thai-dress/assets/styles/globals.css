@@ -29,6 +29,11 @@
   .h3-bold {
     @apply font-bold text-xl lg:text-2xl;
   }
+  .text-foreground {
+    @apply text-[color];
+    foreground: 222.2 84% 4.9%;
+    color: var(--text-foreground);
+  }
 }
 
 @layer base {
@@ -89,6 +94,6 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[color];
   }
 }
